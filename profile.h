@@ -1,8 +1,8 @@
 #ifndef PROFILE_H_
 #define PROFILE_H_
 
-constexpr kMaxVelocity = 1.0;
-constexpr kMaxAcceleration = 1.0;
+constexpr int kMaxVelocity = 1.0;
+constexpr int kMaxAcceleration = 1.0;
 
 class Profile {
 public:
@@ -14,7 +14,7 @@ public:
     current_ = current;
   }
   void SetGoal(ProfilePoint goal) { goal_ = goal; }
-  const double GetTime();
+  const double GetTime(bool ignore_max_velocity);
 
 private:
   ProfilePoint current_;
