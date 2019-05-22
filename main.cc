@@ -1,4 +1,4 @@
-#include "profile.cc"
+#include "profile.h"
 #include <iostream>
 
 int main() {
